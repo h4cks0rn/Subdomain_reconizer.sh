@@ -27,7 +27,7 @@ if [ "$(id  -u)" == "0" ]; then
 else
 		echo -e "${yellowColour}[${endColour}${grayColour}!${endColour}${yellowColour}]${endColour} ${grayColour}Clonando SECLISTS${endColour}"
 		cd /usr/share/wordlists/ &>/dev/null 
-		git https://github.com/danielmiessler/SecLists.git > /dev/null 2>&1
+		git clone  https://github.com/danielmiessler/SecLists.git > /dev/null 2>&1
 	fi
 	sleep 2 ; clear
 	echo -ne "${yellowColour}[${endColour}${grayColour}!${endColour}${yellowColour}]${endColour}${grayColour} Seleccione default : ${endColour} "  &&  read diccionario
